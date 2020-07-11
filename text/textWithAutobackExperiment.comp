@@ -1,0 +1,399 @@
+Composition {
+	CurrentTime = 84,
+	RenderRange = { 0, 124 },
+	GlobalRange = { 0, 124 },
+	CurrentID = 13,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	Version = "DaVinci Resolve Studio 16.2.3.015",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		autoback = TextPlus {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = {
+				GlobalOut = Input { Value = 124, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				LineSpacing = Input { Value = 0.706, },
+				ElementShape1 = Input { Value = 2, },
+				Level1 = Input { Value = 0, },
+				ExtendHorizontal1 = Input { Value = 0.04, },
+				ExtendVertical1 = Input { Value = 0.17, },
+				Round1 = Input { Value = 1, },
+				Type1 = Input { Value = 2, },
+				Red1 = Input { Value = 0.089176, },
+				Green1 = Input { Value = 0.13258336, },
+				Blue1 = Input { Value = 0.157, },
+				Alpha1 = Input { Value = 0.963, },
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[-0.097] = { 0, 0, 0, 0.166 },
+							[0] = { 0.362, 0.29141, 0.29141, 0 },
+							[0.18450184501845] = { 0.898, 0.23409064, 0.07633, 0.360367647058905 },
+							[0.512915129151292] = { 0.496, 0.459379328, 0.079856, 0.845 }
+						}
+					},
+				},
+				ShadingMappingAngle1 = Input { Value = 90, },
+				ShadingMappingSize1 = Input { Value = 1.241, },
+				ShadingMappingLevel1 = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				SoftnessX1 = Input { Value = 15.61, },
+				SoftnessY1 = Input { Value = 16.47, },
+				SoftnessOnFillColorToo1 = Input { Value = 1, },
+				Position1 = Input { Value = 1, },
+				Offset1 = Input { Value = { 0, 0.002 }, },
+				StyledText = Input {
+					Value = "WHAT IS THE MATRIX čšžžžžžžžžžž\n123 testing, char level styling\n3rd line\nit is.",
+					Expression = "sourcetext.StyledText",
+				},
+				Font = Input { Value = "Open Sans Condensed", },
+				Style = Input { Value = "Bold", },
+				Size = Input {
+					Value = 0.0695,
+					Expression = "sourcetext.Size",
+				},
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalLeftCenterRight = Input { Value = -1, },
+				HorizontalJustificationNew = Input { Value = 3, },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 70.4438, 87.8541 } },
+		},
+		sourcetext = TextPlus {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = {
+				GlobalOut = Input { Value = 124, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				LineSpacing = Input { Value = 0.706, },
+				StyledText = Input { Value = "WHAT IS THE MATRIX čšžžžžžžžžžž\n123 testing, char level styling\n3rd line\nit is.", },
+				Font = Input { Value = "Open Sans Condensed", },
+				Style = Input { Value = "Light", },
+				Size = Input { Value = 0.0695, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalLeftCenterRight = Input { Value = -1, },
+				HorizontalJustificationNew = Input { Value = 3, },
+				AdvancedFontControls = Input { Value = 1, },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 67.1105, 3.00565 } },
+		},
+		Merge1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "autoback",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "sourcetext",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 178.777, 28.7632 } },
+		},
+		Transform1 = Transform {
+			Inputs = {
+				Center = Input { Value = { 0.1, 0.237 }, },
+				Input = Input {
+					SourceOp = "Merge1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 288.777, 28.7632 } },
+		},
+		MediaOut1 = Saver {
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "Transform1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 440, 49.5 } },
+		}
+	},
+	Frames = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 0,
+			Left = 0,
+			Top = 0,
+			Width = 1920,
+			Height = 874,
+			ZoneInfo = { ["!Right"] = {
+				}, ["!Left"] = {
+				}, AuxLeft = { Expanded = true }, Right = { Expanded = true, Adjust = false }, Left = { Expanded = false, }, AuxRight = { Expanded = true } },
+			ViewInfo = { Viewer1 = { Show = true, RatioY = 1, RatioX = 0.526315789473684, }, InnerLeft = { RatioY = 1, PixelX = 420, }, MainSplit = { RatioX = 1, RatioY = 0.446540880503145, }, CenterSplit = { RatioX = 0.317903205678757, RatioY = 1, }, Viewer2 = { Show = true, RatioY = 1, RatioX = 0.473684210526316, }, Comments = { Show = false }, Time = { Show = true, PixelY = 83, RatioX = 1, }, InnerColumns = { RatioX = 1, RatioY = 0.448637316561845, }, Keyframes = { Show = false, RatioY = 1, RatioX = 0.333333333333333, Adjust = true, MRU = 0 }, LayoutStrip = { Show = true, RatioX = 1, }, Inspector = { Show = true, RatioX = 1, RatioY = 1, MRU = 1, Adjust = false, }, InnerRight = { RatioY = 1, PixelX = 420, }, ActionStrip = { Show = true, RatioX = 1, }, OuterColumns = { RatioX = 1, RatioY = 1, }, Effects = { Show = true, Adjust = false, RatioY = 1, MRU = 2, RatioX = 1, }, Clips = { Show = false, RatioX = 1, }, Metadata = { Show = false, RatioY = 0.498866213151927, RatioX = 1, }, OuterLeft = { RatioY = 1, PixelX = 420, }, ViewerSplit = { RatioX = 1, RatioY = 0.610328638497653, }, Nodes = { Show = true, RatioY = 1, RatioX = 1, }, OuterRight = { RatioY = 1, PixelX = 520, }, MediaPool = { Show = false, Adjust = true, RatioY = 0.504, MRU = 0, RatioX = 1, }, Spline = { Show = false, RatioX = 0.333333333333333, RatioY = 1, MRU = 0, Adjust = true, } },
+			Views = ordered() {
+				MediaPool = "MediaPoolView",
+				Effects = MultiView {
+					Active = "EffectView",
+					ViewList = ordered() {
+						EffectView = "EffectView"
+					},
+				},
+				Nodes = MultiView {
+					Active = "FlowView",
+					ViewList = ordered() {
+						FlowView = "FlowView"
+					},
+					Names = {
+						FlowView = "FlowView"
+					},
+					FlowView = FlowView {
+						Flags = {
+							AutoHideNavigator = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						RootScale = 1.2,
+						RootOffset = { 216.223, 30.8327 }
+					}
+				},
+				Keyframes = MultiView {
+					Active = "TimelineView",
+					ViewList = ordered() {
+						TimelineView = "TimelineView"
+					},
+					Names = {
+						TimelineView = "TimelineView"
+					},
+					TimelineView = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = false,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 232, Bottom = 348 },
+							ScaleX = 0.23213728549142,
+							OffsetX = -62.2127925117005,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = true,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "none"
+						},
+						Spreadsheet = { LeftPos = 232, Visible = false }
+					}
+				},
+				Spline = MultiView {
+					Active = "SplineView",
+					ViewList = ordered() {
+						SplineView = "SplineEditorView"
+					},
+					Names = {
+						SplineView = "SplineView"
+					},
+					SplineView = SplineEditorView {
+						LeftPos = 264,
+						ScaleX = 0.146388443017656,
+						ScaleY = 0.00790598738215629,
+						OffsetX = 13.9069020866774,
+						OffsetY = -1.23112718844723,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = true,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = true,
+						GuidelinesGrabEnabled = true,
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					}
+				},
+				Inspector = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Viewer1 = MultiView {
+					Active = "LeftView",
+					ViewList = ordered() {
+						LeftView = "PreviewContainer"
+					},
+					Names = {
+						LeftView = "LeftView"
+					},
+				},
+				Viewer2 = MultiView {
+					Active = "RightView",
+					ViewList = ordered() {
+						RightView = "PreviewContainer"
+					},
+					Names = {
+						RightView = "RightView"
+					},
+				},
+				Time = "TimeView",
+				ActionStrip = "ActionStripView",
+				LayoutStrip = "LayoutStripView",
+				Clips = "ClipsView",
+				Metadata = "MetadataView"
+			},
+			Layout = {
+				{ ID = "LayoutStrip", FixedY = 36, Resolve = false, Flat = true },
+				{
+					{
+						{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+						{ ID = "Effects", RatioX = 1 },
+						Zone = "Left",
+						Rows = 2,
+						PaneID = "OuterLeft",
+						PixelX = 420
+					},
+					{
+						{
+							{
+								{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+								{ ID = "Effects", RatioX = 1 },
+								PaneID = "InnerLeft",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Left"
+							},
+							{
+								{
+									{ ID = "Viewer1", RatioY = 0.01, RatioX = 1 },
+									{ ID = "Viewer2", RatioX = 1 },
+									RatioY = 1,
+									Columns = 2,
+									PaneID = "ViewerSplit"
+								},
+								{ ID = "Time", FixedY = 83, Flat = true },
+								RatioX = 1,
+								Rows = 2
+							},
+							{
+								{ ID = "Inspector", RatioY = 1 },
+								{ ID = "Metadata", RatioY = 1, Fusion = false },
+								PaneID = "InnerRight",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Right"
+							},
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "InnerColumns"
+						},
+						{ ID = "ActionStrip", FixedY = 50, Flat = true },
+						{
+							{ ID = "Nodes", RatioX = 1 },
+							{ ID = "Spline", RatioX = 1 },
+							{ ID = "Keyframes", RatioX = 1 },
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "MainSplit"
+						},
+						{ Fusion = false, ID = "Clips", LARGE_FixedY = 160, MEDIUM_FixedY = 138, SMALL_FixedY = 110 },
+						RatioX = 1,
+						Rows = 4,
+						PaneID = "CenterSplit"
+					},
+					{
+						{ ID = "Inspector", RatioY = 1 },
+						{ ID = "Metadata", RatioY = 1, Fusion = false },
+						Zone = "Right",
+						Rows = 2,
+						PaneID = "OuterRight",
+						PixelX = 420
+					},
+					RatioY = 1,
+					Columns = 3,
+					PaneID = "OuterColumns"
+				},
+				RatioX = 1,
+				Rows = 2,
+				RatioY = 1
+			}
+		}
+	},
+	Prefs = {
+		Comp = {
+			Interactive = {
+				Proxy = {
+					Scale = 1,
+				},
+			},
+			NumberStyles = {
+				ClipFrame = 1
+			},
+			Views = {
+				RightView = {
+					Viewer = {
+					},
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } },
+				},
+				LeftView = {
+					Viewer = {
+					},
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } },
+				},
+				View1 = {
+					PrevCtrlInactiveColor = 0,
+					PickW = 0,
+					PickH = 0,
+					PrevCtrlActiveColor = 0,
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } }
+				},
+				FullScreen = { PickW = 1, PickH = 1, },
+			},
+			FrameFormat = {
+				Rate = 25,
+				GuideRatio = 1.77777777777778,
+				TimeCodeType = 1,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			Unsorted = {
+				GlobalEnd = 124
+			},
+			Paths = {
+			},
+		}
+	},
+}
