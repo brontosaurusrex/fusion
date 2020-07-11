@@ -1,8 +1,8 @@
 Composition {
-	CurrentTime = 20,
+	CurrentTime = 108,
 	RenderRange = { 0, 124 },
 	GlobalRange = { 0, 124 },
-	CurrentID = 132,
+	CurrentID = 177,
 	HiQ = true,
 	PlaybackUpdateMode = 0,
 	Version = "DaVinci Resolve Studio 16.2.3.015",
@@ -333,10 +333,10 @@ Composition {
 			SplineColor = { Red = 225, Green = 0, Blue = 225 },
 			NameSet = true,
 			KeyFrames = {
-				[0] = { 0, RH = { 1, 0.017839381443299 }, Flags = { Linear = true } },
-				[3] = { 0.0535181443298969, LH = { 2, 0.0356787628865979 }, RH = { 34.3333333333333, 0.0553787628865979 }, Flags = { Linear = true } },
-				[97] = { 0.0591, LH = { 65.6666666666667, 0.057239381443299 }, RH = { 105, 0.0591 }, Flags = { Linear = true } },
-				[121] = { 0.0818906721536351, LH = { 113, 0.0777469135802469 }, RH = { 122.201184066706, 0.0825128492504639 } },
+				[0] = { 0, RH = { 4.4, 0.05 } },
+				[25] = { 0.0548245360824742, LH = { 16.6675001382828, 0.0497477243110568 }, RH = { 48.9975951898607, 0.0694457512960904 } },
+				[97] = { 0.0591, LH = { 73.0024013097239, 0.0523341430048737 }, RH = { 104.999199867249, 0.0613552857507017 } },
+				[121] = { 0.0818906721536351, LH = { 113.000815689027, 0.0993999978120971 }, RH = { 121.999899983406, 0.0797020021899574 } },
 				[124] = { 0, LH = { 123, 0 } }
 			}
 		},
@@ -494,8 +494,91 @@ Composition {
 				[36] = { 0, LH = { 32.6666666666667, 0 } }
 			}
 		},
-		TV1 = TV {
+		TiltShiftBlur1slow = ofx.com.blackmagicdesign.resolvefx.tiltshiftblur {
 			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = {
+				Source = Input {
+					SourceOp = "CameraShake3",
+					Source = "Output",
+				},
+				BlurType = Input { Value = FuID { "BLUR_TYPE_LENS_BLUR" }, },
+				BlurStrength = Input { Value = 4, },
+				LensIrisGroup = Input { Value = 0, },
+				ShapeType = Input { Value = FuID { "LENS_SHAPE_TYPE_CIRCLE" }, },
+				BladeCurvature = Input { Value = 0, },
+				Rotation = Input { Value = 0, },
+				Anamorphism = Input { Value = 1, },
+				HighlightAmount = Input { Value = 0.349999994039536, },
+				DoFGroup = Input { Value = 1, },
+				mapSource = Input { Value = FuID { "MAP_SOURCE_DESIGNER" }, },
+				DepthPreview = Input { Value = 0, },
+				CenterX = Input {
+					SourceOp = "TiltShiftBlur1CenterX",
+					Source = "Value",
+				},
+				CenterY = Input {
+					SourceOp = "TiltShiftBlur1CenterY",
+					Source = "Value",
+				},
+				Angle = Input { Value = 91, },
+				focusSweep = Input {
+					SourceOp = "TiltShiftBlur1FocusSweep",
+					Source = "Value",
+				},
+				InFocusRange = Input {
+					SourceOp = "TiltShiftBlur1InFocusRange",
+					Source = "Value",
+				},
+				NearBlurRange = Input { Value = 0.649999976158142, },
+				FarBlurRange = Input { Value = 0.649999976158142, },
+				BlendAmount = Input { Value = 0, },
+				blendGroup = Input { Value = 1, },
+				blend = Input { Value = 0, },
+				ignoreContentShape = Input { Value = 0, },
+				legacyIsProcessRGBOnly = Input { Value = 0, },
+				resolvefxVersion = Input { Value = "1.1", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 865.012, 26.827 } },
+		},
+		TiltShiftBlur1CenterX = BezierSpline {
+			SplineColor = { Red = 27, Green = 243, Blue = 225 },
+			NameSet = true,
+			KeyFrames = {
+				[8] = { 0.169051073670387, Flags = { Linear = true } }
+			}
+		},
+		TiltShiftBlur1CenterY = BezierSpline {
+			SplineColor = { Red = 27, Green = 199, Blue = 243 },
+			NameSet = true,
+			KeyFrames = {
+				[8] = { 0.496503502130508, Flags = { Linear = true } }
+			}
+		},
+		TiltShiftBlur1FocusSweep = BezierSpline {
+			SplineColor = { Red = 61, Green = 72, Blue = 248 },
+			NameSet = true,
+			KeyFrames = {
+				[8] = { 0.0223, RH = { 12, 0.0223 } },
+				[20] = { -1, LH = { 16.0004000663757, -0.909137977507909 }, RH = { 30.9960626636567, -1.24980610802347 } },
+				[53] = { -1, LH = { 42.0015324445567, -1.09751218657403 }, RH = { 74.3311996459961, -0.810878023757148 } },
+				[117] = { -0.14, LH = { 95.6666666666667, -0.14 } }
+			}
+		},
+		TiltShiftBlur1InFocusRange = BezierSpline {
+			SplineColor = { Red = 110, Green = 184, Blue = 242 },
+			NameSet = true,
+			KeyFrames = {
+				[8] = { 0.48, RH = { 14, 0.48 } },
+				[26] = { 1, LH = { 20.0006000995636, 0.930673601150513 }, RH = { 34.9984990820298, 1.10398265605901 } },
+				[53] = { 1, LH = { 44.002305612204, 1.15904032782753 }, RH = { 56.3329999446869, 0.94108697395067 } },
+				[63] = { 0.346, LH = { 59.6670000553131, 0.346 }, RH = { 64.6664999723434, 0.346 } },
+				[68] = { 1, LH = { 66.3335000276566, 0.978202180361748 }, RH = { 82.997216896034, 1.19616359700013 } },
+				[113] = { 1, LH = { 98.003070069233, 1.21699639430436 }, RH = { 114.333199977875, 0.980709412565037 } },
+				[117] = { 0.291, LH = { 115.666666666667, 0.291 } }
+			}
+		},
+		TV1 = TV {
 			Inputs = {
 				ScanLines = Input { Value = 3, },
 				Frequency = Input { Value = 0, },
@@ -504,11 +587,11 @@ Composition {
 				BarStrength = Input { Value = 1, },
 				BarSize = Input { Value = 0.843, },
 				Input = Input {
-					SourceOp = "CameraShake3",
+					SourceOp = "TiltShiftBlur1slow",
 					Source = "Output",
 				},
 			},
-			ViewInfo = OperatorInfo { Pos = { 883.345, 80.3624 } },
+			ViewInfo = OperatorInfo { Pos = { 993.345, 77.3321 } },
 		},
 		MediaOut1 = Saver {
 			Inputs = {
@@ -628,7 +711,7 @@ Composition {
 			ZoneInfo = { ["!Right"] = {
 				}, ["!Left"] = {
 				}, AuxLeft = { Expanded = true }, Right = { Expanded = true, Adjust = false }, Left = { Expanded = false, }, AuxRight = { Expanded = true } },
-			ViewInfo = { Viewer1 = { Show = true, RatioY = 1, RatioX = 0.502325581395349, }, InnerLeft = { RatioY = 1, PixelX = 420, }, MainSplit = { RatioX = 1, RatioY = 0.470723306544202, }, CenterSplit = { RatioX = 0.780907668231612, RatioY = 1, }, Viewer2 = { Show = true, RatioY = 1, RatioX = 0.497674418604651, }, Comments = { Show = false }, Time = { Show = true, PixelY = 83, RatioX = 1, }, InnerColumns = { RatioX = 1, RatioY = 0.47187141216992, }, Keyframes = { Show = false, RatioY = 1, RatioX = 0.591577540106952, Adjust = true, MRU = 0 }, LayoutStrip = { Show = true, RatioX = 1, }, Inspector = { Show = true, RatioX = 1, RatioY = 1, MRU = 1, Adjust = false, }, InnerRight = { RatioY = 1, PixelX = 420, }, ActionStrip = { Show = true, RatioX = 1, }, OuterColumns = { RatioX = 1, RatioY = 1, }, Effects = { Show = true, Adjust = false, RatioY = 1, MRU = 2, RatioX = 1, }, Clips = { Show = false, RatioX = 1, }, Metadata = { Show = false, RatioY = 0.5, RatioX = 1, }, OuterLeft = { RatioY = 1, PixelX = 420, }, ViewerSplit = { RatioX = 1, RatioY = 0.797560975609756, }, Nodes = { Show = true, RatioY = 1, RatioX = 1, }, OuterRight = { RatioY = 1, PixelX = 420, }, MediaPool = { Show = false, Adjust = true, RatioY = 0.5, MRU = 0, RatioX = 1, }, Spline = { Show = false, RatioX = 0.522058823529412, RatioY = 1, MRU = 0, Adjust = true, } },
+			ViewInfo = { Viewer1 = { Show = true, RatioY = 1, RatioX = 0.526511627906977, }, InnerLeft = { RatioY = 1, PixelX = 420, }, MainSplit = { RatioX = 1, RatioY = 0.470723306544202, }, CenterSplit = { RatioX = 0.780907668231612, RatioY = 1, }, Viewer2 = { Show = true, RatioY = 1, RatioX = 0.473488372093023, }, Comments = { Show = false }, Time = { Show = true, PixelY = 83, RatioX = 1, }, InnerColumns = { RatioX = 1, RatioY = 0.47187141216992, }, Keyframes = { Show = false, RatioY = 1, RatioX = 0.333333333333333, Adjust = true, MRU = 0 }, LayoutStrip = { Show = true, RatioX = 1, }, Inspector = { Show = true, RatioX = 1, RatioY = 1, MRU = 1, Adjust = false, }, InnerRight = { RatioY = 1, PixelX = 420, }, ActionStrip = { Show = true, RatioX = 1, }, OuterColumns = { RatioX = 1, RatioY = 1, }, Effects = { Show = true, Adjust = false, RatioY = 1, MRU = 2, RatioX = 1, }, Clips = { Show = false, RatioX = 1, }, Metadata = { Show = false, RatioY = 0.498866213151927, RatioX = 1, }, OuterLeft = { RatioY = 1, PixelX = 420, }, ViewerSplit = { RatioX = 1, RatioY = 0.797560975609756, }, Nodes = { Show = true, RatioY = 1, RatioX = 0.66644385026738, }, OuterRight = { RatioY = 1, PixelX = 420, }, MediaPool = { Show = false, Adjust = true, RatioY = 0.504, MRU = 0, RatioX = 1, }, Spline = { Show = true, RatioX = 0.33355614973262, RatioY = 1, MRU = 7, Adjust = false, } },
 			Views = ordered() {
 				MediaPool = "MediaPoolView",
 				Effects = MultiView {
@@ -656,7 +739,7 @@ Composition {
 						Direction = "Horizontal",
 						PipeStyle = "Direct",
 						RootScale = 1.2,
-						RootOffset = { -276.643, 75.2464 }
+						RootOffset = { -504.816, 39.5319 }
 					}
 				},
 				Keyframes = MultiView {
@@ -677,9 +760,9 @@ Composition {
 						ShowAnimatedToolsOnly = false,
 						ShowEditBoxes = false,
 						KeyFrameView = {
-							Position = { Left = 232, Bottom = 348 },
+							Position = { Left = 232, Bottom = 260 },
 							ScaleX = 0.23213728549142,
-							OffsetX = -12.3032761310453,
+							OffsetX = -12.3032761310452,
 							OffsetY = 0,
 							AutoScaling = "scroll",
 							AutoSnapTo = "frame",
@@ -700,10 +783,10 @@ Composition {
 					},
 					SplineView = SplineEditorView {
 						LeftPos = 264,
-						ScaleX = 0.294071146245059,
-						ScaleY = 0.00565543184419731,
-						OffsetX = -12.3509881422925,
-						OffsetY = -0.14704122794913,
+						ScaleX = 0.245268687891639,
+						ScaleY = 0.00038727271874843,
+						OffsetX = 67.203620482309,
+						OffsetY = -0.00982634346521849,
 						AutoScaling = "scroll",
 						AutoSnapTo = "frame",
 						AutoSnapToGuidelines = true,
@@ -714,7 +797,7 @@ Composition {
 						GuidelinesGrabEnabled = true,
 						ToolStates = {
 							Current = {
-								Editable = { "CameraShake1MotionScale", "CameraShake1MotionBlur", "CameraShake1PanAmplitude", "CameraShake1TiltAmplitude", "CameraShake1RotationAmplitude", "CameraShake1PTRSpeed", "CameraShake1ZoomAmplitude", "CameraShake1ZoomSpeed", "CameraShake2SpeedScale", "CameraShake2MotionBlur", "CameraShake2PanAmplitude", "CameraShake2TiltAmplitude", "CameraShake2PTRSpeed", "CameraShake2ZoomAmplitude", "CameraShake2ZoomSpeed", "CameraShake1_1MotionScale" },
+								Editable = { "Text1Size" },
 								NonEditable = { }
 							}
 						},
@@ -849,18 +932,18 @@ Composition {
 				RightView = {
 					Viewer = {
 					},
-					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", NearZ = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, FitMarginY = 0 } },
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } },
 					MaterialViewer = { Camera = { Rotation = { Y = -20, X = 15, Z = 0 } } },
 				},
 				LeftView = {
-					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", NearZ = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, FitMarginY = 0 } },
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } },
 				},
 				View1 = {
 					PrevCtrlInactiveColor = 0,
 					PickW = 0,
 					PickH = 0,
 					PrevCtrlActiveColor = 0,
-					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", NearZ = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, FitMarginY = 0 } }
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } }
 				},
 				FullScreen = { PickW = 1, PickH = 1, }
 			},
