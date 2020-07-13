@@ -1,0 +1,473 @@
+Composition {
+	CurrentTime = 0,
+	RenderRange = { 0, 341 },
+	GlobalRange = { 0, 341 },
+	CurrentID = 18,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	Version = "DaVinci Resolve Studio 16.2.3.015",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		Instance_Text1 = TextPlus {
+			CtrlWZoom = false,
+			SourceOp = "Text1",
+			Inputs = {
+				SettingsNest = Input { },
+				ImageNest = Input { },
+				["Gamut.ColorSpaceNest"] = Input { },
+				["Gamut.GammaSpaceNest"] = Input { },
+				Layout = Input { },
+				LayoutRotation = Input { },
+				Background = Input { },
+				TransformTransform = Input { },
+				TransformRotation = Input { },
+				TransformShear = Input { },
+				TransformSize = Input { },
+				Properties1 = Input { },
+				ElementShape1 = Input { Value = 2, },
+				ExtendHorizontal1 = Input {
+					Value = 0.19,
+					Expression = "ExtendVertical1"
+				},
+				ExtendVertical1 = Input { Value = 0.19, },
+				Round1 = Input { Value = 0.118, },
+				Type1 = Input { },
+				Red1 = Input { Value = 0.429024, },
+				Green1 = Input { Value = 0.654, },
+				Blue1 = Input { Value = 0, },
+				Alpha1 = Input { Value = 0.914, },
+				Softness1 = Input { },
+				Position1 = Input { },
+				Rotation1 = Input { },
+				Shear1 = Input { },
+				Size1 = Input { },
+				TextText = Input { },
+				AdvancedFontControls = Input { },
+				Internal = Input { },
+				TabSpacing = Input { },
+				CommentsNest = Input { },
+				FrameRenderScriptNest = Input { },
+				StartRenderScripts = Input { },
+				EndRenderScripts = Input { },
+				EffectMask = Input { }
+			},
+			ViewInfo = OperatorInfo { Pos = { 399.05, 83.8514 } },
+		},
+		Text1 = TextPlus {
+			Inputs = {
+				GlobalOut = Input { Value = 341, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				LayoutType = Input { Value = 1, },
+				SelectTransform = Input { Value = 2, },
+				LineSpacing = Input { Value = 0.724, },
+				TransformRotation = Input { Value = 1, },
+				Overlap1 = Input { Value = 0, },
+				Level1 = Input { Value = 0, },
+				Round1 = Input { Value = 0.094, },
+				ShadingGradient1 = Input {
+					Value = Gradient {
+						Colors = {
+							[0] = { 0, 0, 0, 1 },
+							[0.243781094527363] = { 0.173, 0.173, 0.173, 1 }
+						}
+					},
+				},
+				StyledText = Input {
+					SourceOp = "CharacterLevelStyling1",
+					Source = "StyledText",
+				},
+				Font = Input { Value = "Open Sans Condensed", },
+				Style = Input { Value = "Bold", },
+				Size = Input { Value = 0.1043, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalLeftCenterRight = Input { Value = -1, },
+				HorizontalJustificationNew = Input { Value = 3, },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 386.479, 10.998 } },
+		},
+		CharacterLevelStyling1 = StyledTextCLS {
+			CtrlWZoom = false,
+			Inputs = {
+				Text = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = "TEXTUALITY\nwas here"
+					},
+				},
+				Font = Input { Value = "Open Sans", },
+				Style = Input { Value = "Bold", },
+				Size = Input { Value = 0.091, },
+				HorizontalLeftCenterRight = Input { Value = -1, },
+				RightClickHereToAnimateCharacterLevelStyling = Input {
+					Value = StyledText {
+						Array = {
+							{
+								Parameter = 102,
+								Index = 0,
+								First = 12,
+								Last = 19,
+								Value = 0.053,
+								String = ""
+							},
+							{
+								Parameter = 109,
+								Index = 0,
+								First = 12,
+								Last = 19,
+								Value = 0,
+								String = "Bold"
+							},
+							{
+								Parameter = 100,
+								Index = 0,
+								First = 12,
+								Last = 19,
+								Value = 0,
+								String = "Open Sans"
+							},
+							{
+								Parameter = 109,
+								Index = 0,
+								First = 0,
+								Last = 9,
+								Value = 0,
+								String = "Bold"
+							},
+							{
+								Parameter = 100,
+								Index = 0,
+								First = 0,
+								Last = 9,
+								Value = 0,
+								String = "Open Sans"
+							},
+							{
+								Parameter = 102,
+								Index = 0,
+								First = 0,
+								Last = 9,
+								Value = 0.091,
+								String = ""
+							}
+						},
+						Value = ""
+					},
+				},
+				LineSpacing = Input { Value = 0.724, },
+				Overlap = Input { Value = 0, },
+				Thickness = Input { Value = 0.02, },
+				JoinStyle = Input { Value = 1, },
+				Level = Input { Value = 0, },
+				Round = Input { Value = 0.094, },
+				PriorityBack = Input { Value = 8, },
+				BevelDepth = Input { Value = 0, },
+				BevelWidth = Input { Value = 0, },
+			},
+		},
+		Merge1 = Merge {
+			Inputs = {
+				Background = Input {
+					SourceOp = "Instance_Text1",
+					Source = "Output",
+				},
+				Foreground = Input {
+					SourceOp = "Text1",
+					Source = "Output",
+				},
+				PerformDepthMerge = Input { Value = 0, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 681.112, 70.4252 } },
+		},
+		MediaOut1 = Saver {
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "Merge1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 882.335, 60.2137 } },
+		}
+	},
+	Frames = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 0,
+			Left = 0,
+			Top = 0,
+			Width = 1920,
+			Height = 874,
+			ZoneInfo = { ["!Right"] = {
+				}, ["!Left"] = {
+				}, AuxLeft = { Expanded = true }, Right = { Expanded = true, Adjust = false }, Left = { Expanded = false, }, AuxRight = { Expanded = true } },
+			ViewInfo = { Viewer1 = { Show = true, RatioY = 1, RatioX = 0.502005347593583, Adjust = false, MRU = 2 }, InnerLeft = { RatioY = 1, PixelX = 420, }, MainSplit = { RatioX = 1, RatioY = 0.470723306544202, }, CenterSplit = { RatioX = 0.728742827334377, RatioY = 1, }, Viewer2 = { Show = true, RatioY = 1, RatioX = 0.497994652406417, }, Comments = { Show = false }, Time = { Show = true, PixelY = 83, RatioX = 1, }, InnerColumns = { RatioX = 1, RatioY = 0.47187141216992, }, Keyframes = { Show = false, RatioX = 0.333333333333333, RatioY = 1, MRU = 0, Adjust = true, }, LayoutStrip = { Show = true, RatioX = 1, }, Inspector = { Show = true, RatioX = 1, RatioY = 1, MRU = 1, Adjust = false, }, InnerRight = { RatioY = 1, PixelX = 420, }, ActionStrip = { Show = true, RatioX = 1, }, OuterColumns = { RatioX = 1, RatioY = 1, }, Effects = { Show = false, Adjust = true, RatioY = 1, MRU = 0, RatioX = 1, }, Clips = { Show = false, RatioX = 1, }, Metadata = { Show = false, RatioY = 0.499453551912568, RatioX = 1, }, OuterLeft = { RatioY = 1, PixelX = 420, }, ViewerSplit = { RatioX = 1, RatioY = 0.797560975609756, }, Nodes = { Show = true, RatioY = 1, RatioX = 1, }, OuterRight = { RatioY = 1, PixelX = 520, }, MediaPool = { Show = false, Adjust = true, RatioY = 0.5, MRU = 0, RatioX = 1, }, Spline = { Show = false, RatioX = 0.333333333333333, RatioY = 1, MRU = 0, Adjust = true, } },
+			Views = ordered() {
+				MediaPool = "MediaPoolView",
+				Effects = MultiView {
+					Active = "EffectView",
+					ViewList = ordered() {
+						EffectView = "EffectView"
+					},
+				},
+				Nodes = MultiView {
+					Active = "FlowView",
+					ViewList = ordered() {
+						FlowView = "FlowView"
+					},
+					Names = {
+						FlowView = "FlowView"
+					},
+					FlowView = FlowView {
+						Flags = {
+							AutoHideNavigator = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						RootScale = 0.848528,
+						RootOffset = { 26, 36.8567 }
+					}
+				},
+				Keyframes = MultiView {
+					Active = "TimelineView",
+					ViewList = ordered() {
+						TimelineView = "TimelineView"
+					},
+					Names = {
+						TimelineView = "TimelineView"
+					},
+					TimelineView = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = false,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 232, Bottom = 300 },
+							ScaleX = 0.785063454117647,
+							OffsetX = 181.349657901176,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = true,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "none"
+						},
+						Spreadsheet = { LeftPos = 232, Visible = false }
+					}
+				},
+				Spline = MultiView {
+					Active = "SplineView",
+					ViewList = ordered() {
+						SplineView = "SplineEditorView"
+					},
+					Names = {
+						SplineView = "SplineView"
+					},
+					SplineView = SplineEditorView {
+						LeftPos = 264,
+						ScaleX = 0.0700389105058366,
+						ScaleY = 0.00818965517241379,
+						OffsetX = 190.43579766537,
+						OffsetY = -2.5551724137931,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = true,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = true,
+						GuidelinesGrabEnabled = true,
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					}
+				},
+				Inspector = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Viewer1 = MultiView {
+					Active = "LeftView",
+					ViewList = ordered() {
+						LeftView = "PreviewContainer"
+					},
+					Names = {
+						LeftView = "LeftView"
+					},
+				},
+				Viewer2 = MultiView {
+					Active = "RightView",
+					ViewList = ordered() {
+						RightView = "PreviewContainer"
+					},
+					Names = {
+						RightView = "RightView"
+					},
+				},
+				Time = "TimeView",
+				ActionStrip = "ActionStripView",
+				LayoutStrip = "LayoutStripView",
+				Clips = "ClipsView",
+				Metadata = "MetadataView"
+			},
+			Layout = {
+				{ ID = "LayoutStrip", FixedY = 36, Resolve = false, Flat = true },
+				{
+					{
+						{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+						{ ID = "Effects", RatioX = 1 },
+						Zone = "Left",
+						Rows = 2,
+						PaneID = "OuterLeft",
+						PixelX = 420
+					},
+					{
+						{
+							{
+								{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+								{ ID = "Effects", RatioX = 1 },
+								PaneID = "InnerLeft",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Left"
+							},
+							{
+								{
+									{ ID = "Viewer1", RatioY = 0.01, RatioX = 1 },
+									{ ID = "Viewer2", RatioX = 1 },
+									RatioY = 1,
+									Columns = 2,
+									PaneID = "ViewerSplit"
+								},
+								{ ID = "Time", FixedY = 83, Flat = true },
+								RatioX = 1,
+								Rows = 2
+							},
+							{
+								{ ID = "Inspector", RatioY = 1 },
+								{ ID = "Metadata", RatioY = 1, Fusion = false },
+								PaneID = "InnerRight",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Right"
+							},
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "InnerColumns"
+						},
+						{ ID = "ActionStrip", FixedY = 50, Flat = true },
+						{
+							{ ID = "Nodes", RatioX = 1 },
+							{ ID = "Spline", RatioX = 1 },
+							{ ID = "Keyframes", RatioX = 1 },
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "MainSplit"
+						},
+						{ Fusion = false, ID = "Clips", LARGE_FixedY = 160, MEDIUM_FixedY = 138, SMALL_FixedY = 110 },
+						RatioX = 1,
+						Rows = 4,
+						PaneID = "CenterSplit"
+					},
+					{
+						{ ID = "Inspector", RatioY = 1 },
+						{ ID = "Metadata", RatioY = 1, Fusion = false },
+						Zone = "Right",
+						Rows = 2,
+						PaneID = "OuterRight",
+						PixelX = 420
+					},
+					RatioY = 1,
+					Columns = 3,
+					PaneID = "OuterColumns"
+				},
+				RatioX = 1,
+				Rows = 2,
+				RatioY = 1
+			}
+		}
+	},
+	Prefs = {
+		Comp = {
+			Interactive = {
+				Proxy = {
+					Scale = 1,
+				},
+			},
+			NumberStyles = {
+				ClipFrame = 1
+			},
+			Views = {
+				RightView = {
+					Viewer = {
+						Region = {
+							Enable = false,
+							Left = 0,
+							Bottom = 0,
+							Right = 1,
+							Top = 1,
+						}
+					},
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } },
+				},
+				LeftView = {
+					Viewer = {
+					},
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } },
+				},
+				View1 = {
+					PrevCtrlInactiveColor = 0,
+					PickW = 0,
+					PickH = 0,
+					PrevCtrlActiveColor = 0,
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", FitMarginY = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, NearZ = 0 } }
+				},
+				FullScreen = { PickW = 1, PickH = 1, },
+			},
+			FrameFormat = {
+				Rate = 25,
+				GuideRatio = 1.77777777777778,
+				TimeCodeType = 1,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			Unsorted = {
+				GlobalEnd = 341
+			},
+			Paths = {
+			},
+		}
+	},
+}
