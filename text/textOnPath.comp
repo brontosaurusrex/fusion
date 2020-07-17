@@ -1,0 +1,437 @@
+Composition {
+	CurrentTime = 61,
+	RenderRange = { 0, 149 },
+	GlobalRange = { 0, 149 },
+	CurrentID = 35,
+	HiQ = true,
+	PlaybackUpdateMode = 0,
+	Version = "DaVinci Resolve Studio 16.2.4.016",
+	SavedOutputs = 0,
+	HeldTools = 0,
+	DisabledTools = 0,
+	LockedTools = 0,
+	AudioOffset = 0,
+	Resumable = true,
+	OutputClips = {
+	},
+	Tools = {
+		Text1 = TextPlus {
+			CtrlWZoom = false,
+			Inputs = {
+				MotionBlur = Input { Value = 1, },
+				Quality = Input { Value = 8, },
+				ShutterAngle = Input { Value = 200, },
+				GlobalOut = Input { Value = 149, },
+				Width = Input { Value = 1920, },
+				Height = Input { Value = 1080, },
+				UseFrameFormatSettings = Input { Value = 1, },
+				["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+				LayoutType = Input {
+					SourceOp = "Text1Type",
+					Source = "Value",
+				},
+				CenterZ = Input { Value = 0.16, },
+				PositionOnPath = Input {
+					SourceOp = "Text1Positiononpath",
+					Source = "Value",
+				},
+				Path = Input {
+					SourceOp = "Text1Path",
+					Source = "Value",
+				},
+				CharacterSpacing = Input {
+					SourceOp = "Text1CharacterSpacing",
+					Source = "Value",
+				},
+				StyledText = Input { Value = "BRONTOSAURUSREX", },
+				Font = Input { Value = "Open Sans", },
+				Style = Input { Value = "Bold", },
+				Size = Input { Value = 0.04258, },
+				VerticalJustificationNew = Input { Value = 3, },
+				HorizontalJustificationNew = Input { Value = 3, },
+				ManualFontKerningPlacement = Input {
+					Value = StyledText {
+						Array = {
+						},
+						Value = ""
+					},
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 583.598, 109.709 } },
+		},
+		Text1Type = BezierSpline {
+			SplineColor = { Red = 244, Green = 192, Blue = 51 },
+			NameSet = true,
+			KeyFrames = {
+				[197] = { 3, Flags = { Linear = true } }
+			}
+		},
+		Text1Positiononpath = BezierSpline {
+			SplineColor = { Red = 237, Green = 132, Blue = 220 },
+			NameSet = true,
+			KeyFrames = {
+				[0] = { -0.436, RH = { 14.1530419661475, 0.750606035042565 } },
+				[50] = { 0.8166, LH = { 40, 0.8154 }, RH = { 66.6647596753628, 0.822409700026343 } },
+				[100] = { 0.8166, LH = { 83.3023133162243, 0.817493679005615 }, RH = { 135.504376881578, 0.814699765744365 } },
+				[162] = { 1.2047, LH = { 149.547656760892, 1.11462135576226 } }
+			}
+		},
+		Text1Path = BezierSpline {
+			SplineColor = { Red = 186, Green = 244, Blue = 89 },
+			NameSet = true,
+			KeyFrames = {
+				[69] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ X = 0.158891767773722, Y = 0.293947833759274, RX = 0.068764092062673, RY = -0.0258596772718174 },
+							{ X = 0.311867034791292, Y = 0.142100681589074, LX = -0.029105851333709, LY = 0.0900192125751306, RX = 0.0495701856206147, RY = -0.153311752527328 },
+							{ X = 0.0372327841347886, Y = -0.0649829928681861, LX = 0.0787984636002046, LY = 0.10791819960591, RX = -0.0924208159438302, RY = -0.126574651421775 },
+							{ X = 0.338227447494925, Y = -0.382574743027932, LX = 0.0591988195759499, LY = 0.180539721242277, RX = -0.0556441023035341, RY = -0.169698835054761 },
+							{ X = -0.136986173436594, Y = -0.297890269588962, LX = 0.0483776864236087, LY = 0.519967972458532, RX = -0.0479930644077423, RY = -0.515834018470052 },
+							{ X = -0.358843753802625, Y = -0.19689035584782, LX = 0.0267050986413252, LY = 0.262005630883448, RX = -0.0209155539191956, RY = -0.205203993944398 },
+							{ X = -0.114743076472051, Y = 0.170910431254738, LX = -0.0438116312145646, LY = -0.29204022672987, RX = 0.0279992859769836, RY = 0.186638059307744 },
+							{ X = -0.297984571757804, Y = 0.241460962246542, LX = -0.199471320663926, LY = -0.334229299881389, RX = 0.0358963283611522, RY = 0.0601470159044849 },
+							{ X = -0.237042479214256, Y = 0.0017744875998699, LX = -0.0493138876037773, LY = 0.00120936785843392, RX = 0.188216681320842, RY = -0.00461580329336412 },
+							{ X = 0.3197047111334, Y = 0.00065819954033941, LX = -0.185103414711222, LY = -0.00161886457082271, RX = 0.0834533167677666, RY = 0.000729860247389293 },
+							{ X = 0.506392117320184, Y = -0.303222785152171, LX = -0.165117237015625, LY = -0.32358581278295 }
+						}
+					} }
+			}
+		},
+		Text1CharacterSpacing = BezierSpline {
+			SplineColor = { Red = 28, Green = 216, Blue = 243 },
+			NameSet = true,
+			KeyFrames = {
+				[35] = { 1.1319, RH = { 40, 1.1319 } },
+				[50] = { 1.1098, LH = { 45.0005000829697, 1.1115263898151 }, RH = { 66.331698755264, 1.10416046027357 } },
+				[99] = { 1.1098, LH = { 82.6683010459588, 1.10476892940555 }, RH = { 106.66589987278, 1.11216152304414 } },
+				[122] = { 1.13198, LH = { 114.333333333333, 1.13198 } }
+			}
+		},
+		Defocus1 = Defocus {
+			Inputs = {
+				Filter = Input { Value = 1, },
+				XDefocusSize = Input {
+					Value = 1.826,
+					Expression = "Glow1.Glow*2",
+				},
+				Input = Input {
+					SourceOp = "Text1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 785.051, 110.566 } },
+		},
+		Glow1 = Glow {
+			CtrlWZoom = false,
+			Inputs = {
+				Blend = Input { Value = 0.2, },
+				Filter = Input { Value = FuID { "Fast Gaussian" }, },
+				XGlowSize = Input { Value = 7.1, },
+				Glow = Input {
+					SourceOp = "Glow1Glow",
+					Source = "Value",
+				},
+				Input = Input {
+					SourceOp = "Defocus1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 954.757, 105.423 } },
+		},
+		Glow1Glow = BezierSpline {
+			SplineColor = { Red = 70, Green = 159, Blue = 249 },
+			NameSet = true,
+			KeyFrames = {
+				[31] = { 0.929, RH = { 31.0853135999278, 0.913501362679783 } },
+				[42] = { 0.827, LH = { 40.3763181640261, 0.887087225684584 }, RH = { 49.1086951824603, 0.563930128620182 } },
+				[50] = { 0.173, LH = { 45.4865647328257, 0.228937001016126 }, RH = { 63.9975248171113, -0.000477520684198707 } },
+				[92] = { 0.173, LH = { 78.0018433626913, 0.0616168181547476 }, RH = { 100.067770508487, 0.237195163185809 } },
+				[112] = { 0.709, LH = { 101.880398176917, 0.581258504435967 }, RH = { 121.297080944358, 0.826358678579005 } },
+				[143] = { 0.913, LH = { 139.127319729339, 0.806097888361955 } }
+			}
+		},
+		MediaOut1 = Saver {
+			CtrlWZoom = false,
+			Inputs = {
+				Index = Input { Value = "0", },
+				Input = Input {
+					SourceOp = "Glow1",
+					Source = "Output",
+				},
+			},
+			ViewInfo = OperatorInfo { Pos = { 1214.05, 111.211 } },
+		}
+	},
+	Frames = {
+		{
+			FrameTypeID = "ChildFrame",
+			Mode = 3,
+			LayoutPreset = 0,
+			Left = 0,
+			Top = 0,
+			Width = 1920,
+			Height = 954,
+			ZoneInfo = { AuxRight = { Expanded = true }, ["!Left"] = {
+				}, AuxLeft = { Expanded = true }, Right = { Expanded = true, }, Left = { Expanded = false, }, ["!Right"] = {
+				} },
+			ViewInfo = { Viewer1 = { Show = true, RatioY = 0.01, RatioX = 0.612299465240642, }, InnerLeft = { PixelX = 420, RatioY = 100, }, MainSplit = { RatioX = 100, RatioY = 0.661487236403996, }, CenterSplit = { RatioX = 1, RatioY = 100, }, Viewer2 = { Show = true, RatioY = 0.01, RatioX = 1.38770053475936, }, Comments = { Show = false }, Time = { Show = true, RatioX = 100, PixelY = 83, }, InnerColumns = { RatioX = 100, RatioY = 1.338512763596, }, Keyframes = { Show = false, Adjust = true, RatioY = 100, MRU = 0, RatioX = 1, }, LayoutStrip = { Show = true, RatioX = 100, }, Inspector = { Show = true, RatioY = 1, RatioX = 100, }, InnerRight = { PixelX = 420, RatioY = 100, }, MediaPool = { Show = false, RatioY = 50, RatioX = 1, }, OuterColumns = { RatioX = 100, RatioY = 1, }, Effects = { Show = false, RatioY = 50, RatioX = 1, }, ActionStrip = { Show = true, RatioX = 100, }, Metadata = { Show = false, RatioY = 1, RatioX = 100, }, OuterLeft = { PixelX = 420, RatioY = 100, }, ViewerSplit = { RatioX = 100, RatioY = 1, }, Nodes = { Show = true, RatioY = 100, RatioX = 1, }, OuterRight = { PixelX = 420, RatioY = 100, }, Clips = { Show = false, RatioX = 100, }, Spline = { Show = false, Adjust = true, RatioY = 100, MRU = 0, RatioX = 1, } },
+			Views = ordered() {
+				MediaPool = "MediaPoolView",
+				Effects = MultiView {
+					Active = "EffectView",
+					ViewList = ordered() {
+						EffectView = "EffectView"
+					},
+				},
+				Nodes = MultiView {
+					Active = "FlowView",
+					ViewList = ordered() {
+						FlowView = "FlowView"
+					},
+					Names = {
+						FlowView = "FlowView"
+					},
+					FlowView = FlowView {
+						Flags = {
+							AutoHideNavigator = true,
+							ForceAll = true,
+							ForceSource = true,
+							ForceMask = true,
+							ForceActive = true,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						NavigatorSize = { 200, 140 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						RootScale = 0.707107,
+						RootOffset = { -81.0814, -46.2833 }
+					}
+				},
+				Keyframes = MultiView {
+					Active = "TimelineView",
+					ViewList = ordered() {
+						TimelineView = "TimelineView"
+					},
+					Names = {
+						TimelineView = "TimelineView"
+					},
+					TimelineView = TimelineView {
+						TreeControlState = {
+						},
+						DisplayMode = "All Tools",
+						ShowCurrentTimeTools = true,
+						Filter = "Show All",
+						ShowSelectedTools = false,
+						ShowAnimatedToolsOnly = false,
+						ShowEditBoxes = false,
+						KeyFrameView = {
+							Position = { Left = 232, Bottom = 275 },
+							ScaleX = 1.9096,
+							OffsetX = -202.4176,
+							OffsetY = 0,
+							AutoScaling = "scroll",
+							AutoSnapTo = "frame",
+							AutoSnapToGuidelines = true,
+							GuidelinesGrabEnabled = true,
+							GuidelinesSnapTo = "frame"
+						},
+						Spreadsheet = { LeftPos = 232, Visible = false }
+					}
+				},
+				Spline = MultiView {
+					Active = "SplineView",
+					ViewList = ordered() {
+						SplineView = "SplineEditorView"
+					},
+					Names = {
+						SplineView = "SplineView"
+					},
+					SplineView = SplineEditorView {
+						LeftPos = 264,
+						ScaleX = 0.410993657505285,
+						ScaleY = 0.0100451020408163,
+						OffsetX = -16.0287526427061,
+						OffsetY = -0.60270612244898,
+						AutoScaling = "scroll",
+						AutoSnapTo = "frame",
+						AutoSnapToGuidelines = true,
+						GuidelinesSnapTo = "frame",
+						ShowKeyMarkers = false,
+						IndependentHandles = false,
+						ShowNonSplineModifiers = true,
+						GuidelinesGrabEnabled = true,
+						ToolStates = {
+							Current = {
+								Editable = { "Text1Positiononpath", "Glow1Glow" },
+								NonEditable = { "Text1Path" }
+							}
+						},
+						ShowOneToolOnly = false,
+						ShowSelectedTools = false,
+						ShowAllInputs = false,
+						Filter = "Show All"
+					}
+				},
+				Inspector = MultiView {
+					Active = "Tools",
+					ViewList = ordered() {
+						Tools = "ControlView",
+						Modifiers = "ModifierView"
+					},
+				},
+				Viewer1 = MultiView {
+					Active = "LeftView",
+					ViewList = ordered() {
+						LeftView = "PreviewContainer"
+					},
+					Names = {
+						LeftView = "LeftView"
+					},
+				},
+				Viewer2 = MultiView {
+					Active = "RightView",
+					ViewList = ordered() {
+						RightView = "PreviewContainer"
+					},
+					Names = {
+						RightView = "RightView"
+					},
+				},
+				Time = "TimeView",
+				ActionStrip = "ActionStripView",
+				LayoutStrip = "LayoutStripView",
+				Clips = "ClipsView",
+				Metadata = "MetadataView"
+			},
+			Layout = {
+				{ ID = "LayoutStrip", FixedY = 36, Resolve = false, Flat = true },
+				{
+					{
+						{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+						{ ID = "Effects", RatioX = 1 },
+						Zone = "Left",
+						Rows = 2,
+						PaneID = "OuterLeft",
+						PixelX = 420
+					},
+					{
+						{
+							{
+								{ ID = "MediaPool", Fusion = false, RatioX = 1 },
+								{ ID = "Effects", RatioX = 1 },
+								PaneID = "InnerLeft",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Left"
+							},
+							{
+								{
+									{ ID = "Viewer1", RatioY = 0.01, RatioX = 1 },
+									{ ID = "Viewer2", RatioX = 1 },
+									RatioY = 1,
+									Columns = 2,
+									PaneID = "ViewerSplit"
+								},
+								{ ID = "Time", FixedY = 83, Flat = true },
+								RatioX = 1,
+								Rows = 2
+							},
+							{
+								{ ID = "Inspector", RatioY = 1 },
+								{ ID = "Metadata", RatioY = 1, Fusion = false },
+								PaneID = "InnerRight",
+								MaxViews = 1,
+								PixelX = 420,
+								Rows = 2,
+								Zone = "!Right"
+							},
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "InnerColumns"
+						},
+						{ ID = "ActionStrip", FixedY = 50, Flat = true },
+						{
+							{ ID = "Nodes", RatioX = 1 },
+							{ ID = "Spline", RatioX = 1 },
+							{ ID = "Keyframes", RatioX = 1 },
+							RatioY = 1,
+							Columns = 3,
+							PaneID = "MainSplit"
+						},
+						{ Fusion = false, ID = "Clips", LARGE_FixedY = 160, MEDIUM_FixedY = 138, SMALL_FixedY = 110 },
+						RatioX = 1,
+						Rows = 4,
+						PaneID = "CenterSplit"
+					},
+					{
+						{ ID = "Inspector", RatioY = 1 },
+						{ ID = "Metadata", RatioY = 1, Fusion = false },
+						Zone = "Right",
+						Rows = 2,
+						PaneID = "OuterRight",
+						PixelX = 420
+					},
+					RatioY = 1,
+					Columns = 3,
+					PaneID = "OuterColumns"
+				},
+				RatioX = 1,
+				Rows = 2,
+				RatioY = 1
+			}
+		}
+	},
+	Prefs = {
+		Comp = {
+			Interactive = {
+				Proxy = {
+					Scale = 1,
+				},
+			},
+			NumberStyles = {
+				ClipFrame = 1
+			},
+			Views = {
+				RightView = {
+					Viewer = {
+					},
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", NearZ = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, FitMarginY = 0 } },
+					Guides = { Show = true, },
+				},
+				LeftView = {
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", NearZ = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, FitMarginY = 0 } },
+				},
+				View1 = {
+					PrevCtrlInactiveColor = 0,
+					PickW = 0,
+					PickH = 0,
+					PrevCtrlActiveColor = 0,
+					SideB = { PrevCtrlInactiveColor = 4278255360, PickW = 1, PickH = 1, PrevCtrlActiveColor = 4278190335, Viewer = { EnableLUTs = false, LUTPlugin = "FusionViewLUT", NearZ = 0, FitMarginX = 0, FitMarginType = 0, FarZ = -1000, FitMarginY = 0 } }
+				},
+				FullScreen = { PickW = 1, PickH = 1, }
+			},
+			FrameFormat = {
+				Rate = 25,
+				GuideRatio = 1.77777777777778,
+				TimeCodeType = 1,
+				DepthFull = 3,
+				DepthPreview = 3,
+				DepthInteractive = 3,
+			},
+			LastFile = "D:\\resolveStuff\\CacheClip\\DiskCache0000.raw",
+			Unsorted = {
+				GlobalEnd = 149
+			},
+			Paths = {
+			},
+			FlowView = {
+				ForceActive = true,
+				ForceSource = true,
+				ForceMask = true,
+				ForceAll = true,
+			},
+		}
+	},
+}
